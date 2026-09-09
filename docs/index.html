@@ -3,50 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人名片</title>
+  <title>个人名片 · 冯彬</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 背景装饰层 -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
   <main class="card">
+    <span class="card-line" aria-hidden="true"></span>
+
     <!-- 头像区 -->
-    <div class="avatar">
-      <span class="avatar-initial">彬</span>
+    <div class="avatar-wrap">
+      <span class="avatar-ring" aria-hidden="true"></span>
+      <div class="avatar">
+        <span class="avatar-initial">彬</span>
+      </div>
+      <span class="status-dot" aria-hidden="true"></span>
     </div>
 
     <!-- 姓名与职位 -->
     <h1 class="name">冯彬</h1>
-    <p class="title">前端高级开发工程师</p>
+    <p class="title">
+      <span class="title-dot" aria-hidden="true"></span>
+      <span>前端高级开发工程师</span>
+    </p>
+
+    <!-- 技能标签 -->
+    <ul class="tags">
+      <li>Vue / React</li>
+      <li>TypeScript</li>
+      <li>性能优化</li>
+    </ul>
 
     <!-- 一句话简介 -->
     <p class="tagline">热爱技术 · 追求极致 · 乐于分享</p>
 
-    <hr class="divider">
+    <div class="divider" aria-hidden="true"></div>
 
     <!-- 联系方式 -->
     <ul class="contact">
       <li>
-        <span class="icon">📞</span>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
         <span class="label">电话</span>
         <a href="tel:13800000000">138-0000-0000</a>
+        <span class="arrow">↗</span>
       </li>
       <li>
-        <span class="icon">✉️</span>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </span>
         <span class="label">邮箱</span>
         <a href="mailto:zhangsan@example.com">zhangsan@example.com</a>
+        <span class="arrow">↗</span>
       </li>
       <li>
-        <span class="icon">📍</span>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
         <span class="label">地址</span>
-        <span>北京市朝阳区</span>
+        <span class="value">北京市朝阳区</span>
       </li>
       <li>
-        <span class="icon">🌐</span>
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </span>
         <span class="label">网站</span>
         <a href="https://zhangsan.example.com" target="_blank" rel="noopener">zhangsan.example.com</a>
+        <span class="arrow">↗</span>
       </li>
     </ul>
+
+    <!-- 社交入口 -->
+    <div class="socials">
+      <a class="social" href="https://github.com" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.64-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      </a>
+      <a class="social" href="https://juejin.cn" target="_blank" rel="noopener" title="掘金" aria-label="掘金">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="social" href="#" title="微信" aria-label="微信">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
+    </div>
   </main>
 
-  <footer class="footer">给我一个名片 · 静待联系 😊</footer>
+  <footer class="footer">© 2026 冯彬 · 静待联系</footer>
 </body>
 </html>
