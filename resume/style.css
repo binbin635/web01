@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6fa;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #1e2a3a;
+}
+
+.resume-card {
+  max-width: 1050px;
+  width: 100%;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px -12px rgba(0, 20, 30, 0.25);
+  padding: 40px 45px;
+  transition: all 0.2s ease;
+}
+
+/* 头部：姓名 + 个人信息 */
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #eef2f7;
+  padding-bottom: 22px;
+}
+
+.name-title h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #0b1a2b;
+  margin-bottom: 6px;
+}
+
+.badge-edu {
+  background: #eef5ff;
+  color: #1f4f8a;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  background: #f8faff;
+  padding: 12px 22px;
+  border-radius: 60px;
+  font-size: 0.95rem;
+  align-items: center;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info i {
+  color: #2a5f9e;
+  width: 18px;
+  font-size: 1rem;
+}
+
+/* 网格布局：左边主要内容，右边侧边栏 */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 32px;
+  margin-top: 6px;
+}
+
+/* ----- 左侧主栏 ----- */
+.main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section {
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #102a41;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-left: 4px solid #2a6bb0;
+  padding-left: 14px;
+}
+
+.section-title i {
+  color: #2a6bb0;
+  font-size: 1.2rem;
+  width: 24px;
+}
+
+/* 教育背景 */
+.edu-item {
+  background: #f9fcff;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e9edf4;
+}
+
+.edu-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.edu-head h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d2b4a;
+}
+
+.edu-date {
+  color: #3e5e7e;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: #e9eff6;
+  padding: 2px 14px;
+  border-radius: 30px;
+}
+
+.edu-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin: 10px 0 8px;
+  font-size: 0.95rem;
+  color: #1f3a57;
+}
+
+.edu-meta i {
+  color: #2a6bb0;
+  width: 20px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 10px;
+}
+
+.course-tag {
+  background: #e8eff9;
+  padding: 2px 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: #1d3d62;
+}
+
+.skill-badge {
+  background: white;
+  border-radius: 30px;
+  padding: 2px 14px;
+  border: 1px solid #d0dcec;
+  font-size: 0.8rem;
+}
+
+/* 项目经历 */
+.project-item {
+  background: #f9fcff;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #e9edf4;
+  margin-bottom: 18px;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.project-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d2b4a;
+}
+
+.project-date {
+  font-size: 0.8rem;
+  background: #e9eff6;
+  padding: 2px 14px;
+  border-radius: 30px;
+  color: #2a4b6e;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #1d3146;
+  margin-top: 8px;
+  padding-left: 2px;
+  list-style: none;
+}
+
+.project-desc li {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-desc li::before {
+  content: "▹";
+  color: #2a6bb0;
+  font-weight: bold;
+}
+
+/* 荣誉 & 证书 */
+.honor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  background: #f9fcff;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid #e9edf4;
+}
+
+.honor-item {
+  background: white;
+  padding: 4px 16px 4px 12px;
+  border-radius: 40px;
+  border: 1px solid #dee8f2;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.honor-item i {
+  color: #f3b33d;
+  font-size: 0.8rem;
+}
+
+.cert-item {
+  background: white;
+  padding: 4px 16px 4px 12px;
+  border-radius: 40px;
+  border: 1px solid #dee8f2;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cert-item i {
+  color: #2a6bb0;
+  width: 16px;
+}
+
+/* ----- 右侧侧边栏 (个人信息+自我评价) ----- */
+.side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.profile-card {
+  background: #f9fcff;
+  border-radius: 20px;
+  padding: 22px 20px;
+  border: 1px solid #e9edf4;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2f7;
+  font-size: 0.95rem;
+}
+
+.profile-item:last-child {
+  border-bottom: none;
+}
+
+.profile-item i {
+  width: 22px;
+  color: #2a6bb0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.self-eval {
+  background: #f9fcff;
+  border-radius: 20px;
+  padding: 22px 20px;
+  border: 1px solid #e9edf4;
+}
+
+.self-eval p {
+  font-size: 0.95rem;
+  color: #1a2f46;
+  line-height: 1.6;
+}
+
+.self-eval i {
+  color: #2a6bb0;
+  margin-right: 6px;
+}
+
+/* 响应式 */
+@media (max-width: 850px) {
+  .resume-card {
+    padding: 28px 20px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-info {
+    padding: 10px 18px;
+    border-radius: 40px;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    width: 100%;
+  }
+
+  .name-title h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .contact-info {
+    font-size: 0.8rem;
+    gap: 6px 12px;
+  }
+}
+
+/* 小点缀 */
+.text-muted {
+  color: #3f5a78;
+}
+
+.mt-1 {
+  margin-top: 6px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.gap-2 {
+  gap: 8px;
+}
